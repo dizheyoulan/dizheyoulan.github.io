@@ -152,101 +152,50 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-第二篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Git Bash常用指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第二篇博文</a>
+      <a class="article-title" href="/2020/07/14/Git%20Bash%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">Git Bash常用指令</a>
     </h1>
   
 
         
-        <a href="/2020/07/14/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-07-14T02:19:12.339Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+        <a href="/2020/07/14/Git%20Bash%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2020-07-14T02:58:55.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
-      
+        <hr>
+<h2 id="Git-Bash常用指令"><a href="#Git-Bash常用指令" class="headerlink" title="Git Bash常用指令"></a>Git Bash常用指令</h2><h2 id="Git-Bash常用指令-1"><a href="#Git-Bash常用指令-1" class="headerlink" title="Git Bash常用指令"></a>Git Bash常用指令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"邮箱地址"</span></span><br></pre></td></tr></table></figure>
+<p>按下回车</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/dizheyoulan/.ssh/id_rsa):</span><br></pre></td></tr></table></figure>
+<p>按下回车</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">键入密码</span><br></pre></td></tr></table></figure>
+<p>按下回车</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">再次键入密码</span><br></pre></td></tr></table></figure>
+<p>按下回车</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved <span class="keyword">in</span> /c/Users/gs/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> /c/Users/gs/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">fingerprnt值 你的邮箱</span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+<h3 id="查看id-rsa-pub"><a href="#查看id-rsa-pub" class="headerlink" title="查看id_rsa.pub"></a>查看id_rsa.pub</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/14/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
+<h3 id="私人密钥和GitHub进行认证"><a href="#私人密钥和GitHub进行认证" class="headerlink" title="私人密钥和GitHub进行认证"></a>私人密钥和GitHub进行认证</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>按下回车后出现</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host <span class="string">'github.com (xxx.xxx.xxx.xxx)'</span> can<span class="string">'t be established.</span></span><br><span class="line"><span class="string">RSA key fingerprint is SHA256:xxxxxxxxxxxxxxx.</span></span><br><span class="line"><span class="string">Are you sure you want to continue connecting (yes/no)?</span></span><br></pre></td></tr></table></figure>
+<p>输入yes后回车</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Warning: Permanently added <span class="string">'github.com,xxx.xxx.xxx.xxx'</span> (RSA) to the list of known hosts.</span><br><span class="line">Enter passphrase <span class="keyword">for</span> key <span class="string">'/c/Users/gs/.ssh/id_rsa'</span>:</span><br></pre></td></tr></table></figure>
+<p>输入密码后回车</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi userid! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
+<p>出现以上字符表示成功</p>
+<h3 id="clone仓库"><a href="#clone仓库" class="headerlink" title="clone仓库"></a>clone仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> [URL]</span><br></pre></td></tr></table></figure>
 
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/14/hello-world/">我的第一篇博文</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/14/hello-world/" class="archive-article-date">
-  	<time datetime="2020-07-14T01:32:54.880Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="其余常用指令"><a href="#其余常用指令" class="headerlink" title="其余常用指令"></a>其余常用指令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#在当前目录新建一个名称为name的库</span></span><br><span class="line">git init name</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加指定目录所有文件到暂存区</span></span><br><span class="line">git add [name]</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加当前目录所有文件到暂存区</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment">#提交所有暂存区的文件到本地仓库</span></span><br><span class="line">git commit -m<span class="string">'注释'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看仓库状态</span></span><br><span class="line">git status </span><br><span class="line"></span><br><span class="line"><span class="comment">#查看file文件的修改内容</span></span><br><span class="line">git diff &lt;file&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把当前master分支推送到远程库(第一次要用-u)</span></span><br><span class="line">git push –u origin master</span><br></pre></td></tr></table></figure>
 
       
 
@@ -259,7 +208,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/14/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/07/14/Git%20Bash%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">展开全文 >></a>
         </p>
       
 
